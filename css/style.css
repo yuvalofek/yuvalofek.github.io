@@ -2,7 +2,7 @@
 
 /* Color Choices */
 :root {
-    --light_blue: #85DCBA;
+    --blue: #85DCBA;
     --dark_blue: #3AA192;
     --orange: #e8a87c;
     --red_orange: #e27d60;
@@ -12,12 +12,12 @@
 
 /* General */
 body {
-    background:  var(--light_blue);
+    background:  var(--blue);
     width: 87.5%;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Titillium Web', sans-serif;
-    color: var(--white);
+    color: var(--dark_blue);
     line-height: 2em;
     overflow: hidden;
 }
@@ -49,6 +49,7 @@ body {
 h1 {
     font-size: 3rem;
     line-height: 1em;
+    color: var(--white)
 }
 
 li:hover {
@@ -68,8 +69,11 @@ a:hover {
 
 /* link list */
 #link-list {
+    list-style-type: none;
     font-size: 1em;
     color: var(--orange);
+    margin-left: -2em;
+    margin-top: -1.5em;
 }
 #link-list li {
     display: inline;
@@ -81,9 +85,28 @@ a:hover {
     content: "";
 }
 
+/* course list */
+#courses {
+    list-style-type: none;
+}
+#courses li {
+    color: var(--white);
+}
+#courses li:hover {
+    color: var(--purple);
+}
+#courses li::before {
+    content: "\2022";
+    color: var(--dark_blue);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -2em;
+}
+
 
 /* paragraphs */
 p b {
     font-weight: normal;
-    color: var(--dark_blue);
+    color: var(--white);
 }
