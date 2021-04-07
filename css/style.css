@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* Color Choices */
+:root {
+    --light_blue: #85DCBA;
+    --dark_blue: #3AA192;
+    --orange: #e8a87c;
+    --red_orange: #e27d60;
+    --purple: #c38d9e;
+}
+
+/* General */
+body {
+    background:  var(--light_blue);
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+}
+
+#placement {
+    padding: 5rem 0rem;
+    margin-left: 13%;
+    margin-right: 20%;
+}
+
+section.content {
+    margin-right: 40%;
+    font-size: 1.5em;
+}
+
+/* main tags*/
+h1 {
+    font-size: 3em;
+}
+
+/* links */
+a{
+    color: var(--red_orange);
+    text-decoration: none
+}
+a:hover {
+    color: var(--orange);
+}
+
+/* paragraphs */
+p b {
+    font-weight: normal;
+    color: var(--dark_blue);
+}
