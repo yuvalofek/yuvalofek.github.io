@@ -19,7 +19,6 @@ body {
     font-family: 'Titillium Web', sans-serif;
     color: var(--dark_blue);
     line-height: 2em;
-    overflow: hidden;
 }
 
 /* layout */
@@ -86,10 +85,11 @@ a:hover {
     margin-top: -0.8em;
     list-style-type: none;
 }
-#courses li {
+#courses li,
+#courses li a {
     color: var(--white);
 }
-#courses li:hover {
+#courses li a:hover {
     color: var(--orange);
 }
 #courses li::before {
