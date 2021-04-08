@@ -94,7 +94,7 @@ a:hover {
 }
 #courses li::before {
     content: "\2022";
-    color: var(--dark_blue);
+    color: var(--purple);
     font-weight: bold;
     display: inline-block;
     width: 1em;
