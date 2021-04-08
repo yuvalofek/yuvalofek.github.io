@@ -4,9 +4,9 @@
 :root {
     --blue: #85DCBA;
     --dark_blue: #3AA192;
-    --orange: #e8a87c;
-    --red_orange: #e27d60;
-    --purple: #c38d9e;
+    --orange: #e08c50;
+    --red_orange: #DA5A35;
+    --purple: #BA7C90;
     --white: white;
 }
 
@@ -26,7 +26,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 2fr 7fr 5fr 2fr;
-    grid-template-rows: 1.5fr 8fr;
+    grid-template-rows: 1.2fr 8fr;
     grid-column
 }
 
@@ -52,10 +52,6 @@ h1 {
     color: var(--white)
 }
 
-li:hover {
-    color: var(--dark_blue);
-    transition: 0.2s;
-}
 
 /* links */
 a{
@@ -87,6 +83,7 @@ a:hover {
 
 /* course list */
 #courses {
+    margin-top: -0.8em;
     list-style-type: none;
 }
 #courses li {
@@ -102,6 +99,27 @@ a:hover {
     display: inline-block;
     width: 1em;
     margin-left: -2em;
+}
+
+.comma-list {
+    margin-top: -0.8em;
+    margin-left: -2em;
+    list-style: none;
+    color: var(--purple)
+}
+.comma-list li {
+    display: inline;
+}
+.comma-list li::after {
+    content: ", ";
+}
+.comma-list li:last-child::after {
+    content: ".";
+}
+
+.comma-list li:hover {
+    color: var(--orange);
+    transition: 0.2s;
 }
 
 
