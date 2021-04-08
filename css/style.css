@@ -90,7 +90,7 @@ a:hover {
     color: var(--white);
 }
 #courses li:hover {
-    color: var(--purple);
+    color: var(--orange);
 }
 #courses li::before {
     content: "\2022";
