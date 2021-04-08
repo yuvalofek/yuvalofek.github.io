@@ -27,7 +27,6 @@ body {
     display: grid;
     grid-template-columns: 2fr 7fr 5fr 2fr;
     grid-template-rows: 1.2fr 8fr;
-    grid-column
 }
 
 .content {
@@ -40,8 +39,8 @@ body {
 
 #bubbles {
     grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
     grid-row-end: 3;
 }
 
@@ -49,9 +48,9 @@ body {
 h1 {
     font-size: 3rem;
     line-height: 1em;
-    color: var(--white)
+    color: var(--white);
+    text-shadow: 0.1em 0.1em rgba(15, 28, 63, 0.125);
 }
-
 
 /* links */
 a{
@@ -70,6 +69,7 @@ a:hover {
     color: var(--orange);
     margin-left: -2em;
     margin-top: -1.5em;
+    text-shadow: 0.1em 0.1em rgba(15, 28, 63, 0.125);
 }
 #link-list li {
     display: inline;
@@ -101,6 +101,8 @@ a:hover {
     margin-left: -2em;
 }
 
+
+/* comma list */
 .comma-list {
     margin-top: -0.8em;
     margin-left: -2em;
@@ -116,12 +118,10 @@ a:hover {
 .comma-list li:last-child::after {
     content: ".";
 }
-
 .comma-list li:hover {
     color: var(--orange);
     transition: 0.2s;
 }
-
 
 /* paragraphs */
 p b {
