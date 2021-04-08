@@ -24,8 +24,8 @@ body {
 /* layout */
 .grid {
     display: grid;
-    grid-template-columns: 2fr 7fr 3fr 2fr;
-    grid-template-rows: 1.2fr 8fr;
+    grid-template-columns: 1fr 7fr 3fr 1fr;
+    grid-template-rows: 0.5fr 8fr;
 }
 
 .content {
