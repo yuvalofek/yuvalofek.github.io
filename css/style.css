@@ -29,7 +29,6 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 1fr;  /* Single column layout for content */
-    gap: 2rem;  /* Space between the grid items */
     padding: 2rem;  /* Padding around the grid */
     max-width: 100%;
 }
@@ -38,7 +37,6 @@ body {
 header {
     grid-column: 1 / -1;  /* Make header span the full width of the grid */
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 /* Main Titles */
@@ -46,8 +44,8 @@ h1 {
     font-size: 3.5rem;
     line-height: 1.2;
     color: var(--charcoal);
-    text-shadow: 0.2em 0.2em rgba(15, 28, 63, 0.1);
-    margin-bottom: 0.5em;
+    text-shadow: 0.1em 0.1em rgba(15, 28, 63, 0.1);
+    margin-bottom: 0em;
     font-weight: 600;
 }
 
@@ -98,7 +96,14 @@ a:hover {
     padding: 2rem;
     background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer {
+    grid-column: 1 / -1;  /* Make footer span the full width of the grid */
+    text-align: center;
+    color: var(--dark-gray);
 }
 
 /* Responsive Enhancements */
@@ -119,5 +124,10 @@ a:hover {
     #link-list {
         flex-direction: column;
         align-items: center;  /* Center links vertically when in column mode */
+    }
+
+    footer {
+        padding: 1rem;
+        font-size: 1rem;
     }
 }
