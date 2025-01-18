@@ -1,130 +1,123 @@
 @charset "utf-8";
 
-/* Color Choices */
+/* Modern Color Palette */
 :root {
-    --blue: #85DCBA;
-    --dark_blue: #308578;
-    --orange: #e08c50;
-    --red_orange: #DA5A35;
-    --purple: #BA7C90;
-    --white: white;
+    --light-blue: #A7C7E7;  /* Soft light blue */
+    --teal: #5F8B8A;        /* Muted teal */
+    --coral: #FF6F61;       /* Soft coral */
+    --blush: #F4A6B0;       /* Light blush pink */
+    --white: #FFFFFF;       /* White */
+    --light-gray: #F7F7F7;  /* Light gray for backgrounds */
+    --dark-gray: #4A4A4A;   /* Dark gray for text */
+    --charcoal: #333333;    /* Charcoal gray */
 }
 
 /* General */
 body {
-    background:  var(--blue);
-    width: 87.5%;
-    margin-left: auto;
-    margin-right: auto;
+    background: var(--light-gray);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     font-family: 'Titillium Web', sans-serif;
-    color: var(--dark_blue);
-    line-height: 2em;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    background-color: var(--white);
+    box-sizing: border-box;
 }
 
-/* layout */
+/* Grid Layout */
 .grid {
     display: grid;
-    grid-template-columns: 1fr 7fr 3fr 1fr;
-    grid-template-rows:  1fr;
+    grid-template-columns: 1fr;  /* Single column layout for content */
+    gap: 2rem;  /* Space between the grid items */
+    padding: 2rem;  /* Padding around the grid */
+    max-width: 100%;
 }
 
-.content {
-    font-size: 1.3rem;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+/* Header Styling */
+header {
+    grid-column: 1 / -1;  /* Make header span the full width of the grid */
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-#bubbles {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-/* main tags*/
+/* Main Titles */
 h1 {
-    font-size: 3rem;
-    line-height: 1em;
-    color: var(--white);
-    text-shadow: 0.1em 0.1em rgba(15, 28, 63, 0.125);
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--charcoal);
+    text-shadow: 0.2em 0.2em rgba(15, 28, 63, 0.1);
+    margin-bottom: 0.5em;
+    font-weight: 600;
 }
 
-/* links */
-a{
-    color: var(--red_orange);
-    text-decoration: none
-}
-
-a:hover {
-    color: var(--orange);
-}
-
-/* link list */
+/* Link List Styling */
 #link-list {
     list-style-type: none;
-    font-size: 1em;
-    color: var(--orange);
-    margin-left: -2em;
-    margin-top: -1.5em;
-    text-shadow: 0.1em 0.1em rgba(15, 28, 63, 0.125);
+    font-size: 1.1rem;
+    color: var(--coral);
+    margin-left: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;  /* Centers the links horizontally */
+    gap: 1rem;  /* Adds space between each link */
 }
+
 #link-list li {
-    display: inline;
+    position: relative;
+    padding-right: 1rem;
 }
+
 #link-list li::after {
     content: " | ";
+    position: absolute;
+    right: 0;
+    top: 0;
 }
+
 #link-list li:last-child::after {
     content: "";
 }
 
-/* course list */
-#courses {
-    margin-top: -0.8em;
-    list-style-type: none;
-}
-#courses li,
-#courses li a {
-    color: var(--white);
-}
-#courses li a:hover {
-    color: var(--orange);
-}
-#courses li::before {
-    content: "\2022";
-    color: var(--purple);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -2em;
+/* Links */
+a {
+    color: var(--coral);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-
-/* comma list */
-.comma-list {
-    margin-top: -0.8em;
-    margin-left: -2em;
-    list-style: none;
-    color: var(--purple)
-}
-.comma-list li {
-    display: inline;
-}
-.comma-list li::after {
-    content: ", ";
-}
-.comma-list li:last-child::after {
-    content: ".";
-}
-.comma-list li:hover {
-    color: var(--orange);
-    transition: 0.2s;
+a:hover {
+    color: var(--blush);
+    text-decoration: underline;
 }
 
-/* paragraphs */
-p b {
-    font-weight: normal;
-    color: var(--white);
+/* Content Section Styling */
+.content {
+    font-size: 1.2rem;
+    grid-column: 1;  /* Ensure content spans the full grid */
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #link-list {
+        flex-direction: column;
+        align-items: center;  /* Center links vertically when in column mode */
+    }
 }
